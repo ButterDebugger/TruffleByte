@@ -1,53 +1,39 @@
 {
-    "name": "@debutter/trufflebyte",
-    "version": "1.4.1",
-    "license": "MIT",
-    "tasks": {
-        "test": "deno test -A",
-        "dev": "deno test -A --watch",
-        "bundle": "deno run -A bundle.ts",
-        "fix": "deno lint && deno fmt && deno publish --allow-dirty --dry-run",
-        "web": "deno run -A bundle.ts --watch & deno serve -A server.ts",
-        "publish": "deno task fix && deno task test && deno publish"
-    },
-    "imports": {
-        "@std/assert": "jsr:@std/assert@1",
-        "core-js": "npm:core-js@^3.41.0"
-    },
-    "exports": "./src/index.ts",
-    "publish": {
-        "exclude": [
-            "test/",
-            "dist/",
-            "public/",
-            "bundle.ts",
-            "server.ts"
-        ]
-    },
-    "lint": {
-        "exclude": [
-            "./public/",
-            "./dist/"
-        ],
-        "rules": {
-            "tags": [
-                "recommended"
-            ],
-            "include": [
-                "explicit-function-return-type",
-                "explicit-module-boundary-types",
-                "eqeqeq",
-                "single-var-declarator",
-                "verbatim-module-syntax"
-            ]
-        }
-    },
-    "fmt": {
-        "exclude": [
-            "./public/",
-            "./dist/"
-        ],
-        "indentWidth": 4,
-        "useTabs": false
-    }
+	"name": "@debutter/trufflebyte",
+	"version": "1.4.2",
+	"license": "MIT",
+	"tasks": {
+		"test": "deno test -A",
+		"dev": "deno test -A --watch",
+		"bundle": "deno run -A bundle.ts",
+		"fix": "deno lint && deno fmt && deno publish --allow-dirty --dry-run",
+		"web": "deno run -A bundle.ts --watch & deno serve -A server.ts",
+		"publish": "deno task fix && deno task test && deno publish"
+	},
+	"imports": {
+		"@std/assert": "jsr:@std/assert@1",
+		"core-js": "npm:core-js@^3.41.0"
+	},
+	"exports": "./src/index.ts",
+	"publish": {
+		"exclude": ["test/", "dist/", "public/", "bundle.ts", "server.ts"]
+	},
+	"lint": {
+		"exclude": ["./public/", "./dist/"],
+		"rules": {
+			"tags": ["recommended"],
+			"include": [
+				"explicit-function-return-type",
+				"explicit-module-boundary-types",
+				"eqeqeq",
+				"single-var-declarator",
+				"verbatim-module-syntax"
+			]
+		}
+	},
+	"fmt": {
+		"exclude": ["./public/", "./dist/"],
+		"indentWidth": 4,
+		"useTabs": false
+	}
 }
